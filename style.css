@@ -179,3 +179,13 @@ div, section{
     font-size: 1rem;
     font-family: var(--font-second);
 }
+
+
+
+@media screen and (max-width:600px) {
+    
+    .calco .bloc-screen .pseudo-screen .screen{
+        font-size: 1.3rem;
+    }
+
+}
