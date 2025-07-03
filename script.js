@@ -53,7 +53,7 @@ function resetToZero(){
 }
 
 function disableCalco(){
-    myScreen.innerHTML = "NaN ! Clear the calculator.";
+    myScreen.innerHTML = '<span>NaN ! Clear the calculator.</span>';
     myHistory.innerHTML = "";
     numbers.forEach(elt => {
         elt.disabled = true;
