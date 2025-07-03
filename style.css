@@ -140,6 +140,9 @@ div, section{
     border: none;
     color: #111111;
 }
+.calco .bloc-screen .pseudo-screen .screen span{
+    font-family: var(--font-second);
+}
 
 /* Header */
 .calco .header{
@@ -174,7 +177,5 @@ div, section{
 .calco .header .history > span{
     margin: 0.5rem 0.5rem;
     font-size: 1rem;
-}
-.calco .header .history span{
     font-family: var(--font-second);
 }
