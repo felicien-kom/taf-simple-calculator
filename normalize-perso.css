@@ -1,0 +1,67 @@
+/* Normalize perso */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+html, body{
+    height: 100%;
+    /* Pour eviter des decalages involontaires */
+}
+html{
+    font-size: 16px;
+    /* Définition de mon rem (1 rem = 16px). */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Maintenir le container mais etendre le body pour les ecrans ultra-larges */
+}
+
+/* Le container contient "tout" et permet une gestion efficace du design et du contenu. */
+.container{
+    width: 100%;
+    height: 100%;
+    /* Technique pour écrans ultra-larges pour ne pas se casser la tête 
+    lorsque ce n'est pas nécessaire mais rester pro. */
+    max-width: 1440px;
+    /* A tester et à verifier sur très grand écrans 
+    max-height: 1000px;*/
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    /*border-radius: 1rem;*/
+}
+button:hover{
+    opacity: 1;
+}
+
+input{
+    outline: none;
+    border: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+ul li{
+    list-style-type: none;
+}
+
+/* OK ! */

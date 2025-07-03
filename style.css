@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* Police spéciale pour donner une véritable allure de calculatrice classique. */
+
+:root{
+    --font-primary: 'Montserrat', Georgia, 'Times New Roman', Times, serif;
+    --font-second: 'Orbitron', Georgia, 'Times New Roman', Times, serif;
+    --btn-radius-perso: 1rem;
+    --standard-lg : 4rem;
+    --standard-ht : 4rem;
+    --standard-header-ht : 5rem;
+    --clr-accent: rgb(255, 68, 0);
+    --clr-accent-hover: rgb(202, 54, 0);
+    --bg-clr-primary: #000000;
+    --bg-clr-sec: #151515;
+    --bg-clr-third: #202020;
+    --clr-primary: #FFFFFF;
+    --clr-sec: #EFEFEF;
+    --clr-third: #DFDFDF;
+}
+body{
+    background-color: var(--bg-clr-sec);
+    color: var(--clr-primary);
+}
+/*
+div, section{
+    border: 1px solid black;
+}
+    */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.calco{
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 16px auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.calco > section{
+    width: 100%;
+    flex: 1;
+}
+
+/* KeyBoard */
+.calco .keyboard{
+    padding: 0.5rem;
+    flex: 3.5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    min-height: 400px;
+}
+.calco .keyboard .key{
+    font-family: var(--font-second);
+    background-color: var(--bg-clr-primary);
+    box-shadow: 0.5px 0.5px 3px black;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calco .keyboard .key:disabled{
+    background-color: transparent;
+}
+.calco .keyboard .key:disabled:hover{
+    background-color: transparent;
+    cursor: default;
+    transform: translate(0, 0);
+}
+.calco .keyboard .key:hover{
+    transform: translate(1px, 1px);
+    background-color: #1f2224;
+}
+.calco .keyboard .key svg{
+    width: 32px;
+    height: 32px;
+}
+.calco .keyboard .operation{
+    color: rgb(0, 119, 230);
+}
+.calco .keyboard .delete{
+    color: rgb(0, 119, 230);
+}
+.calco .keyboard #equals{
+    background-color: rgb(0, 132, 255);
+    color: #FFFFFF;
+    box-shadow: none
+}
+.calco .keyboard #equals:hover{
+    background-color: rgb(0, 87, 168);
+    color: #FFFFFF;
+}
+.calco .keyboard #equals:disabled{
+    background-color: transparent;
+    color: rgb(0, 119, 230);
+}
+.calco .keyboard #clear{
+    color: rgb(255, 0, 0);
+}
+
+/* Bloc-Screen */
+.calco .bloc-screen{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5rem 0.5rem;
+}
+.calco .bloc-screen .pseudo-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calco .bloc-screen .pseudo-screen .screen{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5rem 0.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: var(--font-second);
+    transform: scaleY(1.85);
+    border: none;
+    background-color: #59bb50;
+    color: #111111;
+    border-radius: 2px;
+}
+
+/* Header */
+.calco .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 8px;
+}
+.calco .header > div{
+    width: 100%;
+    flex: 1;
+}
+.calco .header .logo{
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+}
+.calco .header .logo span{
+    margin: 0.5rem 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: var(--font-second);
+}
+.calco .header .history{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.calco .header .history span{
+    margin: 0.5rem 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-second);
+}
