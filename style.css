@@ -174,5 +174,7 @@ div, section{
 .calco .header .history > span{
     margin: 0.5rem 0.5rem;
     font-size: 1rem;
+}
+.calco .header .history span{
     font-family: var(--font-second);
 }
